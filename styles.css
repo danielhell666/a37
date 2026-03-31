@@ -251,6 +251,27 @@ ul { list-style: none; }
   margin-bottom: 20px;
 }
 
+.sub-badge {
+  background-color: rgba(205, 142, 87, 0.1);
+  color: var(--accent-gold);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid rgba(205, 142, 87, 0.2);
+}
+
+.price-item span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
 .hero-title {
   font-size: clamp(3rem, 6vw, 4.5rem);
   font-weight: 800;
@@ -400,24 +421,12 @@ ul { list-style: none; }
 
 .team-photo {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   background-color: #333;
   position: relative;
   background-position: center top; 
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(transparent, rgba(11, 18, 16, 0.9)); 
-}
-
-.team-name-tag {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  font-weight: 700;
 }
 
 .team-info {
@@ -449,10 +458,36 @@ ul { list-style: none; }
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 900px;
   margin: 50px auto 30px;
+}
+
+.sub-milestone-banner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(205, 142, 87, 0.1);
+  padding: 12px 25px;
+  border-radius: 50px;
+  margin: 15px 0 30px;
+  border: 1px solid rgba(205, 142, 87, 0.2);
+  color: var(--text-white);
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.sub-milestone-banner strong {
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+
+.featured-subscription {
+  border: 1px solid var(--accent-gold);
+  z-index: 2;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .pricing-card {
@@ -613,7 +648,6 @@ ul { list-style: none; }
 
 .reviewer .avatar {
   width: 44px; height: 44px;
-  background-color: #4285F4; /* Azul Google */
   color: white;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%; /* Circular Google style */
