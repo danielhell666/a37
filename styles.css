@@ -137,7 +137,7 @@ ul { list-style: none; }
 
 /* ── NAVBAR ─────────────────────────────────────────────── */
 .navbar {
-  padding: 20px 5%;
+  padding: 15px 5%;
   background-color: transparent;
   position: fixed; /* Fixada no topo */
   width: 100%;
@@ -184,8 +184,8 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   /* Simulating image bg with dark gradient overlay */
-  background: linear-gradient(to bottom, rgba(11, 18, 16, 0.8), var(--bg-main)),
-              url('identidade_cores.jpeg') no-repeat center center/cover; 
+  background: linear-gradient(to right, rgba(11, 18, 16, 0.95), rgba(11, 18, 16, 0.75)),
+              url('assets/hero_v2.png') no-repeat center center/cover; 
 }
 
 /* Placeholder for the barber pole & graphic elements seen in image */
@@ -436,13 +436,37 @@ ul { list-style: none; }
 .team-name {
   font-size: 1.4rem;
   color: var(--accent-gold);
+  margin-bottom: 2px;
+}
+
+.team-role {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 15px;
 }
 
 .team-quote {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  font-size: 0.95rem;
+  color: var(--text-white);
   line-height: 1.6;
+  font-style: italic;
+  position: relative;
+  padding-left: 15px;
+  border-left: 2px solid rgba(205, 142, 87, 0.3);
+}
+
+.team-quote::before {
+  content: '"';
+  font-family: var(--font-script);
+  font-size: 5rem;
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  color: rgba(205, 142, 87, 0.1);
+  z-index: -1;
 }
 
 /* ── ASSINATURAS (Pricing) ──────────────────────────────── */
@@ -924,7 +948,8 @@ ul { list-style: none; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .nav-menu { display: none; }
   
-  .hero-title { font-size: 2.5rem; }
+  .hero-title { font-size: 2.3rem; }
+  .nav-cta { padding: 8px 15px; font-size: 0.7rem; }
   .testimonials-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .cta-buttons { flex-direction: column; }
   .footer-content { flex-direction: column; gap: 20px; text-align: center; }
@@ -937,8 +962,8 @@ ul { list-style: none; }
 /* ── WHATSAPP FLOAT ───────────────────────────────────────── */
 .whatsapp-float {
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 40px;
+  right: 30px;
   background-color: #25D366;
   color: white;
   padding: 12px 20px;
@@ -967,6 +992,6 @@ ul { list-style: none; }
 
 @media (max-width: 600px) {
   .whatsapp-float span { display: none; }
-  .whatsapp-float { padding: 15px; border-radius: 50%; bottom: 20px; right: 20px; }
+  .whatsapp-float { padding: 15px; border-radius: 50%; bottom: 30px; right: 25px; }
 }
 
