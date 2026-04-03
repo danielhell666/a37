@@ -1075,6 +1075,23 @@ ul { list-style: none; }
   color: var(--accent-gold);
 }
 
+.unit-card-link, 
+.footer-address-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.unit-card-link:hover {
+  transform: translateY(-5px);
+}
+
+.unit-card-link:hover .unit-card {
+  border-color: var(--accent-gold);
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .locations-map-placeholder {
   background-color: var(--bg-main);
   border-radius: var(--radius-sm);
