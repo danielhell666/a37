@@ -33,11 +33,11 @@
                     style="height: 45px; vertical-align: middle;">
             </div>
             <nav class="nav-menu">
-                <a href="#servicos">Serviços</a>
+                <a href="#hero">Início</a>
+                <a href="#time">Quem Somos</a>
                 <a href="#assinaturas">Planos</a>
-                <a href="#time">Time</a>
-                <a href="#unidades">Unidades</a>
                 <a href="#faq">FAQ</a>
+                <a href="#footer">Contato</a>
             </nav>
             <a href="#agendar" class="btn btn-primary nav-cta">Agende Agora</a>
         </div>
@@ -46,31 +46,40 @@
     <!-- =======================================
          HERO SECTION
          ======================================= -->
-    <section class="hero-section"
-        style="background: linear-gradient(to right, rgba(11, 18, 16, 0.95) 0%, rgba(11, 18, 16, 0.75) 100%), url('assets/hero_v2.png') no-repeat center center/cover;">
-
-        <div class="container hero-grid reveal-on-scroll">
+    <section class="hero-section" id="hero">
+        <div class="container hero-grid">
             <!-- Esquerda: Título Original -->
             <div class="hero-content text-left">
-                <span class="hero-kicker">DESIGN DE CORTE E ESTILO</span>
-                <h1 class="hero-title">
+                <span class="hero-kicker hero-reveal">DESIGN DE CORTE E ESTILO</span>
+                <h1 class="hero-title hero-reveal" style="animation-delay: 0.3s;">
                     Sua Identidade,<br>
                     <span class="accent-script">Sem Limites.</span>
                 </h1>
-                <p class="hero-description" style="margin-bottom: 0;">
+                <p class="hero-description hero-reveal" style="animation-delay: 0.6s; margin-bottom: 0;">
                     A barbearia que resgata a verdadeira essência da sua imagem. Corte, manutenção da sua presença e
                     excelência com precisão para quem não aceita menos que o topo.
                 </p>
             </div>
 
             <!-- Direita: Convite ao Clube -->
-            <div class="hero-subscription-card">
+            <div class="hero-subscription-card hero-reveal" style="animation-delay: 1s;">
                 <div class="sub-badge"><span class="material-symbols-outlined">group</span> +400 ASSINANTES</div>
                 <img src="assets/logos/logo_letras_bege.png" alt="Clube A37" class="hero-club-logo">
                 <h3>Clube Exclusive</h3>
                 <p>Garanta sua <strong>presença impecável</strong> todos os dias com cortes e manutenções ilimitadas.
                 </p>
-                <a href="#assinaturas" class="btn btn-primary btn-block">Fazer Parte do Clube</a>
+                <a href="#assinaturas" class="btn btn-primary btn-block btn-large">Fazer Parte do Clube</a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </section>
@@ -79,65 +88,125 @@
          MANIFESTO (Estética não é vaidade)
          ======================================= -->
     <section class="manifesto-section" id="manifesto">
-        <div class="container manifesto-grid">
-            <div class="manifesto-text reveal-on-scroll">
+        <div class="manifesto-bg-atmosphere" style="background-image: linear-gradient(to right, rgba(11, 18, 16, 0.95), rgba(11, 18, 16, 0.7)), url('assets/ambiente/@jesse.fotografo215.jpg');"></div>
+        
+        <div class="container manifesto-content-wrapper">
+            <div class="manifesto-text-glass glass-panel reveal-on-scroll">
                 <span class="section-kicker">PROPÓSITO SARTORIAL</span>
                 <h2 class="section-title text-left">
                     Estética não é<br>
                     vaidade,<br>
-                    <span class="text-muted">é disciplina.</span>
+                    <span class="accent-script">é disciplina.</span>
                 </h2>
                 <p class="manifesto-desc">
-                    Foi se o tempo em que o seu visual era apenas linha d'água de comodidade. Hoje ele é seu cartão de
-                    visitas na frente mestre de "quem" trata e da manutenção do seu melhor estado.
+                    Seu visual é seu cartão de visitas mais imediato. Ele não apenas reflete quem você é, mas anuncia suas intenções antes mesmo de você dizer a primeira palavra. Na A37, elevamos sua imagem ao patamar da sua ambição.
                 </p>
-                <blockquote class="manifesto-quote">
-                    "Quem busca o sucesso não se conforma com desculpas. A sua aparência é a métrica da sua ambição."
+                <blockquote class="manifesto-quote-modern">
+                    "Quem busca o sucesso não se conforma com desculpas. A sua aparência é a métrica da sua disciplina."
                 </blockquote>
             </div>
-            <div class="manifesto-visual reveal-on-scroll delayed">
-                <div class="visual-block-img"
-                    style="background: url('assets/ambiente/@jesse.fotografo214.jpg') center/cover;">
+
+            <div class="manifesto-atmosphere-gallery reveal-on-scroll delayed">
+                <div class="atmos-photo p1" style="background-image: url('assets/ambiente/@jesse.fotografo214.jpg');"></div>
+                <div class="atmos-photo p2" style="background-image: url('assets/ambiente/@jesse.fotografo217.jpg');"></div>
+                <div class="atmos-photo p3" style="background-image: url('assets/ambiente/@jesse.fotografo200.jpg');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================
+         INTELIGÊNCIA VISUAL (Galeria Premium)
+         ======================================= -->
+    <section class="gallery-section bg-panel" id="servicos">
+        <div class="container reveal-on-scroll">
+            <div class="section-header text-center">
+                <span class="section-kicker">INTELIGÊNCIA VISUAL</span>
+                <h2 class="section-title">Arquitetura do Visual</h2>
+                <p class="section-subtitle">Onde o design encontra a performance sartorial.</p>
+            </div>
+
+            <div class="visual-gallery">
+                <!-- Imagens atualizadas da pasta 'assets/inteligencia visual' -->
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo112.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Design Atemporal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo113.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Precisão Técnica</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo133.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Identidade</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo168.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Performance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card landscape">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo178.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Estilo Sartorial</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo89.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Presença Impecável</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo92.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Disciplina</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo99.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Essência</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo205.jpg');">
+                        <div class="gallery-overlay">
+                            <span class="overlay-text">Excelência</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- =======================================
-         SERVIÇOS (Arquitetura do Visual)
+         AGGRESSIVE CTA BANNER
          ======================================= -->
-    <section class="services-section bg-panel" id="servicos">
+    <section class="aggressive-cta-banner">
         <div class="container reveal-on-scroll">
-            <div class="section-header text-center">
-                <span class="section-kicker">INTELIGÊNCIA VISUAL</span>
-                <h2 class="section-title">Arquitetura do Visual</h2>
-            </div>
-
-            <div class="services-grid">
-                <!-- Imagens atualizadas da pasta 'assets/inteligencia visual' -->
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo112.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo113.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo133.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo168.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo178.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo89.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo92.jpg') center/cover;"></div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img-placeholder photo" style="background: url('assets/inteligencia visual/@jesse.fotografo99.jpg') center/cover;"></div>
+            <div class="cta-content-glass text-center">
+                <span class="cta-kicker">O SEU PRÓXIMO NÍVEL</span>
+                <h2 class="cta-headline">PARE DE ACEITAR O COMUM.<br>SUA IMAGEM É SEU MAIOR ATIVO.</h2>
+                <p class="cta-description">Não espere uma ocasião especial para estar impecável. O padrão A37 é para quem entende que a excelência é um hábito diário.</p>
+                
+                <div class="cta-actions">
+                    <a href="https://booksy.com/pt-br/73919_barbearia-a37_barbearia_25272_taguatinga" target="_blank" class="btn btn-primary btn-large">AGENDAR TRANSFORMAÇÃO</a>
+                    <a href="#assinaturas" class="btn btn-outline btn-large">CONHECER O CLUBE</a>
                 </div>
             </div>
         </div>
@@ -151,29 +220,41 @@
             <div class="section-header text-center">
                 <span class="section-kicker">NOSSA EXCELÊNCIA</span>
                 <h2 class="section-title">Fundadores na Linha de Frente</h2>
+                <p class="section-subtitle">A visão por trás da marca que redefine o padrão visual.</p>
             </div>
 
-            <div class="team-grid">
-                <!-- Guardião 1 -->
-                <div class="team-card">
-                    <div class="team-photo photo-1"
-                        style="background: #111 url('assets/luciano/@jesse.fotografo28.jpg') top center/cover no-repeat; filter: grayscale(100%) contrast(1.1);">
+            <div class="founders-cinematic">
+                <!-- Guardião 1 - Luciano -->
+                <div class="founder-card-horizontal">
+                    <div class="founder-visual">
+                        <div class="founder-img" style="background-image: url('assets/luciano/@jesse.fotografo28.jpg');"></div>
                     </div>
-                    <div class="team-info">
-                        <h3 class="team-name">Luciano</h3>
-                        <span class="team-role">Visão e Estratégia</span>
-                        <p class="team-quote">"A A37 nasceu para resolver um problema que atrapalhava muita gente: o homem moderno não tem tempo a perder. A gente garante que aqui dentro o padrão visual é alto, impecável e, acima de tudo, sem frescura. O nosso foco é unir a experiência na cadeira com uma operação que respeite e valorize o seu tempo."</p>
+                    <div class="founder-info-glass glass-panel">
+                        <span class="founder-tag">Fundador & CEO</span>
+                        <h3 class="founder-name">Luciano</h3>
+                        <p class="founder-quote">"A A37 nasceu para resolver um problema que atrapalhava muita gente: o homem moderno não tem tempo a perder. A gente garante que aqui dentro o padrão visual é alto e impecável."</p>
+                        <div class="founder-details">
+                            <span class="detail-item">Estrategista</span>
+                            <span class="detail-divider"></span>
+                            <span class="detail-item">Design de Operação</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Guardião 2 -->
-                <div class="team-card">
-                    <div class="team-photo photo-2"
-                        style="background: #111 url('assets/yuri/@jesse.fotografo250.jpg') top center/cover no-repeat; filter: grayscale(100%) contrast(1.1);">
+
+                <!-- Guardião 2 - Yuri -->
+                <div class="founder-card-horizontal reverse">
+                    <div class="founder-visual">
+                        <div class="founder-img" style="background-image: url('assets/yuri/@jesse.fotografo250.jpg');"></div>
                     </div>
-                    <div class="team-info">
-                        <h3 class="team-name">Yuri</h3>
-                        <span class="team-role">Operação e Qualidade</span>
-                        <p class="team-quote">"São anos suando a camisa atrás de uma cadeira, usando a tesoura e conversando com cliente o dia todo. Eu sei que sentar ali é depositar confiança extrema na gente. Minha missão hoje é liderar o time pra todo mundo sair satisfeito nas agulhas e entregar sempre a precisão que a marca promete."</p>
+                    <div class="founder-info-glass glass-panel">
+                        <span class="founder-tag">Fundador & Diretor Técnico</span>
+                        <h3 class="founder-name">Yuri</h3>
+                        <p class="founder-quote">"São anos suando a camisa atrás de uma cadeira. Minha missão hoje é liderar o time para entregar sempre a precisão que a marca promete e o cliente confia."</p>
+                        <div class="founder-details">
+                            <span class="detail-item">Mestre de Corte</span>
+                            <span class="detail-divider"></span>
+                            <span class="detail-item">Qualidade Técnica</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -186,12 +267,13 @@
     <section class="pricing-section bg-panel" id="assinaturas">
         <div class="container reveal-on-scroll">
             <div class="section-header text-center">
+                <span class="section-kicker">CORTES À VONTADE PARA O SEU DIA A DIA</span>
                 <h2 class="section-title">Assinaturas <span class="accent-script">Exclusive</span></h2>
+                
                 <div class="sub-milestone-banner">
                     <span class="material-symbols-outlined">group</span>
-                    <strong>+400 CLIENTES</strong> JÁ ELEVARAM SEU PADRÃO NO CLUBE
+                    <span><strong>+400 CLIENTES</strong> JÁ ELEVARAM SEU PADRÃO NO CLUBE</span>
                 </div>
-                <p class="pricing-subtitle uppercase-kicker">CORTES A VONTADE PARA O SEU DIA A DIA</p>
             </div>
 
             <div class="pricing-grid">
@@ -514,7 +596,7 @@
     <!-- =======================================
          FOOTER
          ======================================= -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
         <div class="container footer-grid">
             <!-- Coluna 1: Logo e Descrição -->
             <div class="footer-col branding">
@@ -539,10 +621,11 @@
             <div class="footer-col nav">
                 <h4>Navegação</h4>
                 <ul>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#assinaturas">Assinaturas</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
-                    <li><a href="#unidades">Unidades</a></li>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#time">Quem Somos</a></li>
+                    <li><a href="#assinaturas">Planos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#footer">Contato</a></li>
                 </ul>
             </div>
 
