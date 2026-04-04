@@ -1377,47 +1377,46 @@ section[id] {
   .scroll-indicator { display: none; } /* Ocultar no mobile para ganhar espaço */
 
   /* Manifesto & Galeria Atmosférica */
-  .manifesto-section { padding: 60px 0 60px; min-height: auto; }
-  .manifesto-content-wrapper { padding: 0 5%; }
+  .manifesto-section { padding: 60px 5%; min-height: auto; }
   .manifesto-text-glass {
-    padding: 30px 20px;
+    padding: 25px 20px;
     margin-bottom: 30px;
+    max-width: 100% !important;
     width: 100%;
     box-sizing: border-box;
   }
   .manifesto-text-glass .section-title {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
-  
+
   .manifesto-atmosphere-gallery { 
     position: relative;
     height: auto; 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 8px;
-    padding: 0 5% 40px;
+    padding-bottom: 30px;
     width: 100%;
     box-sizing: border-box;
   }
   
-  .atmos-photo { 
+  /* Override das larguras fixas em px das classes específicas */
+  .atmos-photo.p1, .atmos-photo.p2, .atmos-photo.p3 { 
     position: relative !important; 
     top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     transform: none !important;
-    flex: 1 1 0;
-    min-width: 0;
-    aspect-ratio: 2/3;
-    height: auto;
-    width: auto;
+    width: 30% !important;
+    height: 160px !important;
+    flex: none;
+    filter: brightness(1) !important;
     border-radius: var(--radius-sm);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
   
-  .atmos-photo.p3 { display: block; margin-top: 40px; }
+  .atmos-photo.p3 { display: block !important; margin-top: 40px; }
   .atmos-photo.p2 { margin-top: 20px; }
-  .atmos-photo.p1 { margin-top: 0; }
 
   /* Founders */
   .founder-visual { flex: 0 0 320px; }
