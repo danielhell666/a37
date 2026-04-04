@@ -1377,28 +1377,48 @@ section[id] {
   .scroll-indicator { display: none; } /* Ocultar no mobile para ganhar espaço */
 
   /* Manifesto & Galeria Atmosférica */
-  .manifesto-section { padding: 80px 5% 60px; min-height: auto; }
-  .manifesto-text-glass { padding: 40px 20px; margin-bottom: 30px; }
-  .manifesto-text-glass .section-title { font-size: 1.8rem; }
-  .manifesto-text-glass .section-title br { display: none; }
+  .manifesto-section { padding: 60px 5% 60px; min-height: auto; }
+  .manifesto-text-glass {
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+  .manifesto-text-glass .section-title {
+    font-size: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .manifesto-text-glass p,
+  .manifesto-text-glass blockquote {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
   
   .manifesto-atmosphere-gallery { 
     position: relative;
     height: auto; 
-    display: flex; 
-    justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
     gap: 8px;
     padding: 0 5% 40px;
     width: 100%;
+    box-sizing: border-box;
   }
   
   .atmos-photo { 
     position: relative !important; 
     top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     transform: none !important;
-    flex: 0 0 30%;
-    aspect-ratio: 3/4;
+    flex: 1 1 0;
+    min-width: 0;
+    aspect-ratio: 2/3;
     height: auto;
+    width: auto;
     border-radius: var(--radius-sm);
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
