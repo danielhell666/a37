@@ -85,6 +85,15 @@ ul { list-style: none; }
 
 .bg-panel { background-color: var(--bg-panel); }
 
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
 /* ── Botões ─────────────────────────────────────────────── */
 .btn {
   display: inline-flex;
@@ -1369,30 +1378,34 @@ section[id] {
 
   /* Manifesto & Galeria Atmosférica */
   .manifesto-section { padding: 80px 5% 60px; min-height: auto; }
-  .manifesto-text-glass { padding: 40px 25px; margin-bottom: 40px; }
-  .manifesto-title { font-size: 2.2rem; }
+  .manifesto-text-glass { padding: 40px 20px; margin-bottom: 30px; }
+  .manifesto-text-glass .section-title { font-size: 1.8rem; }
+  .manifesto-text-glass .section-title br { display: none; }
   
   .manifesto-atmosphere-gallery { 
     position: relative;
     height: auto; 
     display: flex; 
     justify-content: center; 
-    gap: 15px;
-    padding-bottom: 20px;
+    gap: 8px;
+    padding: 0 5% 40px;
+    width: 100%;
   }
   
   .atmos-photo { 
     position: relative !important; 
     top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     transform: none !important;
-    flex: 0 0 45%;
-    height: 280px;
+    flex: 0 0 30%;
+    aspect-ratio: 3/4;
+    height: auto;
     border-radius: var(--radius-sm);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   }
   
-  .atmos-photo.p3 { display: none; }
-  .atmos-photo.p2 { margin-top: 40px; } /* Efeito de escada horizontal */
+  .atmos-photo.p3 { display: block; margin-top: 40px; }
+  .atmos-photo.p2 { margin-top: 20px; }
+  .atmos-photo.p1 { margin-top: 0; }
 
   /* Founders */
   .founder-visual { flex: 0 0 320px; }
