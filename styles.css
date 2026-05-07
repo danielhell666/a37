@@ -211,8 +211,8 @@ ul { list-style: none; }
   align-items: center;
   justify-content: center;
   padding: 100px 5% 60px;
-  background: linear-gradient(to right, rgba(11, 18, 16, 0.95), rgba(11, 18, 16, 0.75)),
-              url('assets/hero_v2.png') no-repeat center center/cover;
+  background: linear-gradient(to right, rgba(11, 18, 16, 0.85), rgba(11, 18, 16, 0.65)),
+              url('assets/hero_v3.png') no-repeat center center/cover;
 }
 
 /* ── SCROLL INDICATOR ───────────────────────────────────── */
@@ -607,8 +607,8 @@ ul { list-style: none; }
 /* ── BANNER CTA AGGRESSIVE ──────────────────────────────── */
 .aggressive-cta-banner {
   padding: 120px 5%;
-  background: linear-gradient(rgba(7, 11, 10, 0.95), rgba(7, 11, 10, 0.85)), 
-              url('assets/hero_v2.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(7, 11, 10, 0.85), rgba(7, 11, 10, 0.65)), 
+              url('assets/hero_v3.png') no-repeat center center/cover;
   background-attachment: fixed;
   border-top: 1px solid rgba(205, 142, 87, 0.3);
   border-bottom: 1px solid rgba(205, 142, 87, 0.3);
@@ -1345,7 +1345,8 @@ section[id] {
   .hero-grid, .manifesto-grid, .team-grid, .pricing-grid, .locations-grid {
     grid-template-columns: 1fr;
   }
-  .hero-subscription-card { margin-top: 40px; }
+  .hero-grid { gap: 16px; }
+  .hero-subscription-card { margin-top: 16px; }
   .services-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .nav-menu { display: none; }
