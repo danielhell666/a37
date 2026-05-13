@@ -1446,27 +1446,47 @@ section[id] {
 /* ── WHATSAPP FLOAT ───────────────────────────────────────── */
 .whatsapp-float {
   position: fixed;
-  bottom: 40px;
+  bottom: 80px;
   right: 30px;
   background-color: #25D366;
   color: white;
-  padding: 12px 20px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 0;
   z-index: 9999;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   letter-spacing: 1px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .whatsapp-float:hover {
-  transform: scale(1.1);
+  width: 220px;
   background-color: #20BA5A;
+  padding: 0 20px;
+  justify-content: center;
+  gap: 10px;
+  transform: scale(1.05);
+}
+
+.whatsapp-float span {
+  opacity: 0;
+  max-width: 0;
+  transition: opacity 0.3s ease, max-width 0.3s ease;
+}
+
+.whatsapp-float:hover span {
+  opacity: 1;
+  max-width: 200px;
 }
 
 .whatsapp-float img {
@@ -1476,6 +1496,81 @@ section[id] {
 
 @media (max-width: 600px) {
   .whatsapp-float span { display: none; }
-  .whatsapp-float { padding: 15px; border-radius: 50%; bottom: 30px; right: 25px; }
+  .whatsapp-float { 
+    width: 54px;
+    height: 54px;
+    padding: 0; 
+    border-radius: 50%; 
+    bottom: 90px; 
+    right: 20px; 
+  }
 }
 
+/* ── MODAIS LEGAIS ──────────────────────────────────────── */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000; /* Acima de tudo, até do botão do WhatsApp */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  padding: 40px;
+  overflow-y: auto;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  background-color: var(--bg-panel);
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--accent-gold);
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+}
+
+.modal-body ul {
+  margin-left: 20px;
+  margin-bottom: 15px;
+  list-style-type: disc;
+}
+
+.modal-body li {
+  margin-bottom: 8px;
+}

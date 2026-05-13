@@ -684,8 +684,8 @@
                 &copy; 2026 Barbearia A37. A essência do seu estilo.
             </div>
             <div class="footer-legal">
-                <a href="#">Privacidade</a>
-                <a href="#">Termos</a>
+                <a href="#" id="open-privacy">Privacidade</a>
+                <a href="#" id="open-terms">Termos</a>
             </div>
         </div>
     </footer>
@@ -695,6 +695,15 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         <span>TIRE SUAS DÚVIDAS</span>
     </a>
+
+    <!-- Modal de Políticas e Termos -->
+    <div class="modal-overlay" id="legal-modal">
+        <div class="modal-content glass-panel">
+            <span class="modal-close" id="close-modal">&times;</span>
+            <h2 id="modal-title" class="section-title text-left" style="font-size: 1.8rem; margin-bottom: 20px;"></h2>
+            <div class="modal-body text-muted" id="modal-body" style="line-height: 1.6; font-size: 0.95rem;"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

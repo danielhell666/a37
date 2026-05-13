@@ -67,4 +67,55 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* ── 4. Modais de Privacidade e Termos ─────────────────── */
+    const modal = document.getElementById('legal-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    const closeModal = document.getElementById('close-modal');
+    const openPrivacy = document.getElementById('open-privacy');
+    const openTerms = document.getElementById('open-terms');
+
+    const contentPrivacy = `
+        <p>Na Barbearia A37, valorizamos sua privacidade. Coletamos apenas os dados necessários para o agendamento de serviços, controle do Clube Exclusive e comunicação essencial (como lembretes de horário via WhatsApp).</p>
+        <p>Suas informações (nome, telefone, e-mail) não são vendidas ou compartilhadas com terceiros não autorizados. Utilizamos padrões de segurança adequados para proteger seus dados.</p>
+        <p>Ao utilizar nosso site ou aplicativo de agendamento, você concorda com a coleta e uso das informações conforme descrito. Para dúvidas ou solicitação de exclusão de dados, entre em contato via WhatsApp.</p>
+    `;
+
+    const contentTerms = `
+        <p>Bem-vindo à Barbearia A37. Ao agendar um serviço ou assinar o Clube Exclusive, você concorda com nossos termos.</p>
+        <ul>
+            <li><strong>Agendamentos:</strong> Solicitamos pontualidade. Atrasos superiores a 15 minutos poderão resultar em cancelamento do horário para não prejudicar o próximo cliente.</li>
+            <li><strong>Clube Exclusive:</strong> O plano de assinatura é pessoal e intransferível. Oferece serviços ilimitados conforme o plano escolhido, restritos a um agendamento ativo por vez.</li>
+            <li><strong>Cancelamento do Plano:</strong> Sem fidelidade. O cancelamento pode ser feito a qualquer momento antes da próxima cobrança, sem multas.</li>
+            <li><strong>Conduta:</strong> Prezamos por um ambiente de respeito mútuo. A barbearia reserva-se o direito de recusar atendimento em caso de comportamento inadequado.</li>
+        </ul>
+    `;
+
+    if(openPrivacy && openTerms && modal) {
+        openPrivacy.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalTitle.textContent = 'Política de Privacidade';
+            modalBody.innerHTML = contentPrivacy;
+            modal.classList.add('active');
+        });
+
+        openTerms.addEventListener('click', (e) => {
+            e.preventDefault();
+            modalTitle.textContent = 'Termos de Uso';
+            modalBody.innerHTML = contentTerms;
+            modal.classList.add('active');
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Fechar ao clicar fora do modal
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
+
 });
