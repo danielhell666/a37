@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Barbearia A37 - Estética não é vaidade, é disciplina.">
-    <title>Barbearia A37 - Sua Identidade, Sem Limites</title>
+    <meta name="description" content="Barbearia A37 em Samambaia, Brasília-DF. Barbearia premium por assinatura: cortes e barbas ilimitados a partir de R$69,90/mês. +600 assinantes. Agende pelo app!">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0B1210">
+    <meta name="geo.region" content="BR-DF">
+    <meta name="geo.placename" content="Samambaia, Brasília, Distrito Federal">
+    <meta name="geo.position" content="-15.875;-48.073">
+    <meta name="ICBM" content="-15.875, -48.073">
+    <title>Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília</title>
+    <link rel="canonical" href="https://barbeariaa37-4db87.web.app/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -16,18 +23,29 @@
     <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Barbearia A37 - Sua Identidade, Sem Limites">
-    <meta property="og:description" content="Estética não é vaidade, é disciplina. A barbearia que eleva sua imagem ao patamar da sua ambição.">
+    <meta property="og:title" content="Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília">
+    <meta property="og:description" content="Barbearia premium por assinatura em Samambaia, Brasília. Cortes e barbas ilimitados a partir de R$69,90/mês. +600 assinantes. Agende agora!">
     <meta property="og:image" content="https://barbeariaa37-4db87.web.app/og-image.png">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://barbeariaa37-4db87.web.app/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Barbearia A37">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília">
+    <meta name="twitter:description" content="Barbearia premium por assinatura em Samambaia, Brasília. Cortes e barbas ilimitados. Agende pelo app!">
     <meta name="twitter:image" content="https://barbeariaa37-4db87.web.app/og-image.png">
 
-    <!-- Google Fonts: Inter (geral) e Whisper / Playfair (para o script "Sem Limites") -->
+    <!-- Preload hero image para LCP -->
+    <link rel="preload" as="image" href="assets/hero_v3.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Google Fonts: Inter (geral) e Playfair Display (para o script "Sem Limites") -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,ital,wght@1,600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap"
         rel="stylesheet">
 
     <!-- Icons (Material Symbols ou FontAwesome genérico, usando caracteres para placeholder se não houver biblioteca) -->
@@ -48,7 +66,7 @@
                 <img src="assets/logos/logo_letras_bege.png" alt="Barbearia A37"
                     style="height: 45px; vertical-align: middle;">
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="nav-menu">
                 <a href="#hero">Início</a>
                 <a href="#time">Quem Somos</a>
                 <a href="#assinaturas">Planos</a>
@@ -56,6 +74,11 @@
                 <a href="#footer">Contato</a>
             </nav>
             <a href="/agendar" class="btn btn-primary nav-cta">Agende Agora</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
@@ -79,9 +102,9 @@
 
             <!-- Direita: Convite ao Clube -->
             <div class="hero-subscription-card hero-reveal" style="animation-delay: 1s;">
-                <div class="sub-badge"><span class="material-symbols-outlined">group</span> +400 ASSINANTES</div>
+                <div class="sub-badge"><span class="material-symbols-outlined">group</span> +600 ASSINANTES</div>
                 <img src="assets/logos/logo_letras_bege.png" alt="Clube A37" class="hero-club-logo">
-                <h3>Clube Exclusive</h3>
+                <h3>Clube Exclusivo</h3>
                 <p>Garanta sua <strong>presença impecável</strong> todos os dias com cortes e manutenções ilimitadas.
                 </p>
                 <a href="/plano" class="btn btn-primary btn-block btn-large">Fazer Parte do Clube</a>
@@ -96,6 +119,49 @@
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================
+         IDENTIDADE / REFERÊNCIA NA REGIÃO
+         ======================================= -->
+    <section class="about-section" id="identidade">
+        <div class="about-aura"></div>
+
+        <div class="container about-content-wrapper reveal-on-scroll">
+            <div class="about-glass-card about-plaque">
+                <div class="plaque-badge">★ &nbsp;Melhor Barbearia da Região&nbsp; ★</div>
+                <span class="plaque-corner plaque-tl"></span>
+                <span class="plaque-corner plaque-tr"></span>
+                <span class="plaque-corner plaque-bl"></span>
+                <span class="plaque-corner plaque-br"></span>
+
+                <span class="section-kicker about-stagger-2">QUEM SOMOS</span>
+                <h2 class="section-title about-stagger-2">
+                    A maior e melhor barbearia,<br>
+                    <span class="accent-script">por assinatura.</span>
+                </h2>
+
+                <div class="about-body">
+                    <p class="about-paragraph about-stagger-3">
+                        Barbearia A37 é referência na região quando o assunto é estilo, cuidado e experiência. Somos a maior e melhor barbearia da região, oferecendo um conceito moderno de barbearia por assinatura, pensado para quem valoriza praticidade, qualidade e atendimento diferenciado.
+                    </p>
+                    <p class="about-paragraph about-stagger-4">
+                        Aqui, cada cliente vive uma experiência exclusiva, com cortes modernos, barba impecável, ambiente sofisticado e profissionais altamente qualificados. Nosso plano de assinatura garante benefícios únicos, atendimento prioritário e a liberdade de manter o visual sempre em dia sem preocupação.
+                    </p>
+                </div>
+
+                <div class="about-tagline-block">
+                    <p class="about-tagline-intro about-stagger-5">
+                        Na A37, não entregamos apenas serviços — entregamos
+                    </p>
+                    <p class="about-tagline-words">
+                        <span class="tagline-word about-stagger-6">autoestima,</span>
+                        <span class="tagline-word about-stagger-7">confiança</span>
+                        <span class="tagline-word about-stagger-8">&amp; estilo.</span>
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -144,14 +210,14 @@
             <div class="visual-gallery">
                 <!-- Imagens atualizadas da pasta 'assets/inteligencia visual' -->
                 <div class="gallery-card">
-                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo112.jpg');">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo202.jpg');">
                         <div class="gallery-overlay">
-                            <span class="overlay-text">Design Atemporal</span>
+                            <span class="overlay-text">Ritual</span>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-card">
-                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo113.jpg');">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo95.jpg');">
                         <div class="gallery-overlay">
                             <span class="overlay-text">Precisão Técnica</span>
                         </div>
@@ -174,26 +240,26 @@
                 <div class="gallery-card landscape">
                     <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo178.jpg');">
                         <div class="gallery-overlay">
-                            <span class="overlay-text">Estilo Sartorial</span>
+                            <span class="overlay-text">Disciplina</span>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-card">
-                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo89.jpg');">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo200.jpg');">
                         <div class="gallery-overlay">
                             <span class="overlay-text">Presença Impecável</span>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-card">
-                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo92.jpg');">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo219.jpg');">
                         <div class="gallery-overlay">
-                            <span class="overlay-text">Disciplina</span>
+                            <span class="overlay-text">Maestria</span>
                         </div>
                     </div>
                 </div>
                 <div class="gallery-card">
-                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo99.jpg');">
+                    <div class="gallery-img" style="background-image: url('assets/inteligencia visual/@jesse.fotografo97.jpg');">
                         <div class="gallery-overlay">
                             <span class="overlay-text">Essência</span>
                         </div>
@@ -240,32 +306,34 @@
             </div>
 
             <div class="founders-cinematic">
-                <!-- Guardião 1 - Luciano -->
+                <!-- Guardiã 1 - Ozana Araujo -->
                 <div class="founder-card-horizontal">
                     <div class="founder-visual">
-                        <div class="founder-img" style="background-image: url('assets/luciano/@jesse.fotografo28.jpg');"></div>
+                        <div class="founder-img" style="background-image: url('assets/ana/ana.png'); background-position: center -40px;"></div>
                     </div>
                     <div class="founder-info-glass glass-panel">
-                        <span class="founder-tag">Fundador & CEO</span>
-                        <h3 class="founder-name">Luciano</h3>
-                        <p class="founder-quote">"A A37 nasceu para resolver um problema que atrapalhava muita gente: o homem moderno não tem tempo a perder. A gente garante que aqui dentro o padrão visual é alto e impecável."</p>
+                        <span class="founder-tag">Fundadora</span>
+                        <h3 class="founder-name">Ozana Araujo</h3>
+                        <p class="founder-quote">Ozana Araujo é sócia da Barbearia A37 e atua com dedicação, visão estratégica e paixão pelo atendimento ao público. Com um olhar moderno para gestão e experiência do cliente, participa ativamente do crescimento da marca, contribuindo para que a A37 seja reconhecida não apenas pela qualidade dos serviços, mas também pelo ambiente acolhedor, elegante e diferenciado.</p>
+                        <p class="founder-quote">Comprometida com excelência, organização e inovação, Ozana acredita que uma barbearia vai além de cortes e estética — é um espaço de conexão, autoestima e transformação. Sua atuação reflete cuidado em cada detalhe, fortalecendo diariamente a identidade e os valores da Barbearia A37.</p>
                         <div class="founder-details">
-                            <span class="detail-item">Estrategista</span>
+                            <span class="detail-item">Visão Estratégica</span>
                             <span class="detail-divider"></span>
-                            <span class="detail-item">Design de Operação</span>
+                            <span class="detail-item">Experiência do Cliente</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Guardião 2 - Yuri -->
+                <!-- Guardião 2 - Yure -->
                 <div class="founder-card-horizontal reverse">
                     <div class="founder-visual">
                         <div class="founder-img" style="background-image: url('assets/yuri/@jesse.fotografo250.jpg');"></div>
                     </div>
                     <div class="founder-info-glass glass-panel">
-                        <span class="founder-tag">Fundador & Diretor Técnico</span>
-                        <h3 class="founder-name">Yuri</h3>
-                        <p class="founder-quote">"São anos suando a camisa atrás de uma cadeira. Minha missão hoje é liderar o time para entregar sempre a precisão que a marca promete e o cliente confia."</p>
+                        <span class="founder-tag">Fundador</span>
+                        <h3 class="founder-name">Yure</h3>
+                        <p class="founder-quote">Yure é fundador da Barbearia A37 e referência técnica na construção do padrão de qualidade da casa. Com anos de experiência prática, desenvolveu um método de atendimento que une precisão, consistência e cuidado com cada cliente, garantindo que cada serviço represente a excelência que a marca defende.</p>
+                        <p class="founder-quote">À frente da operação técnica, atua na formação do time, no refinamento dos processos e na manutenção dos detalhes que elevam a experiência dentro da barbearia. Para Yure, excelência não é resultado de um único corte, mas de uma cultura diária de disciplina, evolução e respeito à identidade de cada pessoa que passa pela A37.</p>
                         <div class="founder-details">
                             <span class="detail-item">Mestre de Corte</span>
                             <span class="detail-divider"></span>
@@ -288,16 +356,17 @@
                 
                 <div class="sub-milestone-banner">
                     <span class="material-symbols-outlined">group</span>
-                    <span><strong>+400 CLIENTES</strong> JÁ ELEVARAM SEU PADRÃO NO CLUBE</span>
+                    <span><strong>+600 CLIENTES</strong> JÁ ELEVARAM SEU PADRÃO NO CLUBE</span>
                 </div>
             </div>
 
             <div class="pricing-grid">
-                <!-- Plano Básico (Escuro) -->
+                <!-- Plano Corte -->
                 <div class="pricing-card dark-card featured-subscription">
+                    <button class="plan-info-btn" data-plan="corte" aria-label="Saiba mais">?</button>
                     <div class="card-icon"><span class="material-symbols-outlined">content_cut</span></div>
-                    <h3 class="plan-name">Corte à Vontade</h3>
-                    <p class="plan-desc">A sua rotina de perfil em um único valor</p>
+                    <h3 class="plan-name">Corte Ilimitado</h3>
+                    <p class="plan-desc">Seu visual sempre alinhado.</p>
 
                     <div class="plan-price highlight">
                         <span class="currency">R$</span>
@@ -306,50 +375,63 @@
                     </div>
 
                     <ul class="plan-features">
-                        <li><span class="material-symbols-outlined check">check_circle</span> Cortes
-                            Ilimitados</li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Lavar
-                            Cabelo/Secar</li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Produtos de
-                            Finalização</li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Descontos em lojas
-                            parceiras</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Cortes Ilimitados</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Lavar Cabelo/Secar</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Produtos de Finalização</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
                     </ul>
 
                     <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar Agora</a>
                 </div>
 
-                <!-- Plano VIP (Verde com Destaque Dourado) -->
-                <div class="pricing-card accent-card">
-                    <div class="recomendado-badge">MAIS COMPLETO</div>
+                <!-- Plano Barba -->
+                <div class="pricing-card dark-card">
+                    <button class="plan-info-btn" data-plan="barba" aria-label="Saiba mais">?</button>
                     <div class="card-icon"><span class="material-symbols-outlined">face</span></div>
-                    <h3 class="plan-name">Corte e Barba à Vontade</h3>
-                    <p class="plan-desc">A estética pessoal sempre imbatível</p>
+                    <h3 class="plan-name">Barba Ilimitada</h3>
+                    <p class="plan-desc">Barba bem feita muda presença.</p>
 
                     <div class="plan-price highlight">
                         <span class="currency">R$</span>
-                        <span class="amount">129,90</span>
+                        <span class="amount">89,90</span>
                         <span class="period">/mês</span>
                     </div>
 
                     <ul class="plan-features">
-                        <li><span class="material-symbols-outlined check">check_circle</span> Corte, Barba e Acabamento
-                        </li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Corte na Máquina Ilimitado
-                        </li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Toalha Quente & Hidratação
-                        </li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> 5% OFF em Alisamento,
-                            Química e outros</li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Descontos em lojas
-                            parceiras</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Barba Ilimitada</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Acabamento Incluso</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
+                    </ul>
+
+                    <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar Agora</a>
+                </div>
+
+                <!-- Plano Corte e Barba -->
+                <div class="pricing-card accent-card">
+                    <div class="recomendado-badge">MAIS COMPLETO</div>
+                    <button class="plan-info-btn" data-plan="corte_barba" aria-label="Saiba mais">?</button>
+                    <div class="card-icon"><span class="material-symbols-outlined">auto_awesome</span></div>
+                    <h3 class="plan-name">Corte + Barba Ilimitados</h3>
+                    <p class="plan-desc">O máximo da experiência A37.</p>
+
+                    <div class="plan-price highlight">
+                        <span class="currency">R$</span>
+                        <span class="amount">119,90</span>
+                        <span class="period">/mês</span>
+                    </div>
+
+                    <ul class="plan-features">
+                        <li><span class="material-symbols-outlined check">check_circle</span> Corte e Barba Ilimitados</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Corte na Máquina Ilimitado</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Tratamento com Vapor de Ozônio</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
                     </ul>
 
                     <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar o Clube</a>
                 </div>
             </div>
 
-            <p class="pricing-disclaimer text-center">*Sem fidelidade. Cancele quando quiser. Planos intransferíveis.
+            <p class="pricing-disclaimer text-center">*Sem fidelidade. Cancele quando quiser por telefone ou diretamente na recepção. Planos intransferíveis.
             </p>
         </div>
     </section>
@@ -407,7 +489,7 @@
                     <div class="stars">★★★★★</div>
                     <span class="date">Há 1 mês</span>
                     <p class="review-text">"Atendimento fenomenal. Já é importante vir pelo serviço, mas o ambiente e as
-                        conversas me deixam relaxado. Recomendo muito aos velhos da região que buscam lugar cativo."</p>
+                        conversas me deixam relaxado. Recomendo muito aos moradores da região que buscam lugar cativo."</p>
                     <div class="reviewer">
                         <div class="avatar" style="background-color: #DB4437;">L</div>
                         <div class="reviewer-info">
@@ -548,8 +630,7 @@
                         <span class="material-symbols-outlined">expand_more</span>
                     </div>
                     <div class="faq-answer">
-                        <p>Sim, não temos fidelidade. Você pode cancelar sua assinatura a qualquer momento diretamente
-                            pelo aplicativo, sem multas ou burocracia.</p>
+                        <p>Sim, não temos fidelidade. O cancelamento é feito por telefone ou diretamente na recepção, sem multas ou burocracia.</p>
                     </div>
                 </div>
             </div>
@@ -566,7 +647,7 @@
                 <div class="locations-list">
                     <span class="section-kicker">ONDE ESTAMOS</span>
                     <h2 class="section-title text-left" style="margin-bottom: 30px;">Nossas Unidades</h2>
-                    <p class="locations-desc">Respeitamos pontos estratégicos de conveniência. Escolha a sua comodidade.
+                    <p class="locations-desc">Estamos em pontos estratégicos da cidade. Escolha a sua comodidade.
                     </p>
 
                     <a href="https://maps.app.goo.gl/wS2Mb44JUfEftJAV7" target="_blank" class="unit-card-link">
@@ -575,7 +656,7 @@
                             <div class="unit-info">
                                 <h4 class="unit-name">A37 Samambaia - QS 112</h4>
                                 <p class="unit-address">Qs 112 cj05 lt01 - Samambaia, Brasília - DF, 72302-545</p>
-                                <span class="unit-status open">ATÉ 20:00H</span>
+                                <span class="unit-status open">ATÉ 20H</span>
                             </div>
                         </div>
                     </a>
@@ -586,14 +667,15 @@
                             <div class="unit-info">
                                 <h4 class="unit-name">A37 Samambaia - CT Urbano 302</h4>
                                 <p class="unit-address">Centro Urbano Q. 302 CJ 06 LT 01 LOJA 14 - Samambaia, Brasília - DF, 72300-641</p>
-                                <span class="unit-status open">ATÉ 20:00H</span>
+                                <span class="unit-status open">ATÉ 20H</span>
                             </div>
                         </div>
                     </a>
                 </div>
 
                 <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" class="locations-map-placeholder"
-                    style="background: url('assets/gerais/mapa.png') center/cover; border: 1px solid rgba(255,255,255,0.1); display: block;">
+                    style="background: url('assets/gerais/mapa.png') center/cover; border: 1px solid rgba(255,255,255,0.1); display: block;"
+                    aria-label="Ver mapa da Barbearia A37 no Google Maps">
                 </a>
             </div>
         </div>
@@ -705,7 +787,101 @@
         </div>
     </div>
 
+    <!-- Modal de Planos -->
+    <div id="plan-modal" class="plan-modal-backdrop" role="dialog" aria-modal="true">
+        <div class="plan-modal-box">
+            <button id="plan-modal-close" class="plan-modal-close" aria-label="Fechar">&times;</button>
+            <h3 id="plan-modal-name" class="plan-modal-name"></h3>
+            <p id="plan-modal-text" class="plan-modal-text"></p>
+            <p id="plan-modal-note" class="plan-modal-note"></p>
+        </div>
+    </div>
+
     <script src="script.js"></script>
+
+    <!-- Schema.org LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://barbeariaa37-4db87.web.app/#organization",
+          "name": "Barbearia A37",
+          "url": "https://barbeariaa37-4db87.web.app/",
+          "logo": "https://barbeariaa37-4db87.web.app/assets/logos/logo_letras_bege.png",
+          "sameAs": ["https://instagram.com/barbeariaa37"]
+        },
+        {
+          "@type": "HairSalon",
+          "@id": "https://barbeariaa37-4db87.web.app/#unidade-qs112",
+          "name": "Barbearia A37 — Samambaia QS 112",
+          "image": "https://barbeariaa37-4db87.web.app/og-image.png",
+          "url": "https://barbeariaa37-4db87.web.app/",
+          "telephone": "+55-61-98364-8832",
+          "priceRange": "R$69–R$119/mês",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "QS 112 Conjunto 05 Lote 01",
+            "addressLocality": "Samambaia",
+            "addressRegion": "DF",
+            "postalCode": "72302-545",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -15.875,
+            "longitude": -48.073
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "200"
+          },
+          "parentOrganization": { "@id": "https://barbeariaa37-4db87.web.app/#organization" }
+        },
+        {
+          "@type": "HairSalon",
+          "@id": "https://barbeariaa37-4db87.web.app/#unidade-302",
+          "name": "Barbearia A37 — Samambaia CT Urbano 302",
+          "image": "https://barbeariaa37-4db87.web.app/og-image.png",
+          "url": "https://barbeariaa37-4db87.web.app/",
+          "telephone": "+55-61-98364-8832",
+          "priceRange": "R$69–R$119/mês",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Centro Urbano Quadra 302 Conjunto 06 Lote 01 Loja 14",
+            "addressLocality": "Samambaia",
+            "addressRegion": "DF",
+            "postalCode": "72300-641",
+            "addressCountry": "BR"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "08:00",
+              "closes": "20:00"
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "200"
+          },
+          "parentOrganization": { "@id": "https://barbeariaa37-4db87.web.app/#organization" }
+        }
+      ]
+    }
+    </script>
 </body>
 
 </html>

@@ -365,6 +365,214 @@ ul { list-style: none; }
   line-height: 1.6;
 }
 
+/* ── IDENTIDADE / REFERÊNCIA NA REGIÃO ───────────────────── */
+.about-section {
+  position: relative;
+  padding: 120px 5% 110px;
+  background-color: var(--bg-main);
+  overflow: hidden;
+}
+
+.about-aura {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 25%, rgba(205, 142, 87, 0.10), transparent 55%),
+    radial-gradient(circle at 82% 75%, rgba(205, 142, 87, 0.06), transparent 55%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-content-wrapper {
+  position: relative;
+  z-index: 5;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.about-pillars {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.pillar-chip {
+  background: rgba(205, 142, 87, 0.07);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(205, 142, 87, 0.35);
+  border-radius: 100px;
+  padding: 10px 28px;
+  font-family: var(--font-script);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.about-glass-card {
+  position: relative;
+  padding: 72px 90px 65px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(#0d1a18, #0d1a18) padding-box,
+    linear-gradient(135deg, #CD8E57 0%, #f0c87a 30%, #b87b46 55%, #f0c87a 75%, #CD8E57 100%) border-box;
+  border: 2px solid transparent;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  box-shadow:
+    0 0 0 1px rgba(205, 142, 87, 0.12) inset,
+    0 50px 120px -20px rgba(0, 0, 0, 0.85),
+    0 0 80px -15px rgba(205, 142, 87, 0.12);
+}
+
+.about-glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(205, 142, 87, 0.18);
+  border-radius: calc(var(--radius-md) - 4px);
+  pointer-events: none;
+}
+
+.about-glass-card .section-title {
+  margin-bottom: 0;
+}
+
+.plaque-badge {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #b87b46, #f0c87a, #CD8E57, #f0c87a, #b87b46);
+  color: #0B1210;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 7px 24px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.plaque-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+
+.plaque-tl { top: 20px; left: 20px; border-top: 2px solid var(--accent-gold); border-left: 2px solid var(--accent-gold); }
+.plaque-tr { top: 20px; right: 20px; border-top: 2px solid var(--accent-gold); border-right: 2px solid var(--accent-gold); }
+.plaque-bl { bottom: 20px; left: 20px; border-bottom: 2px solid var(--accent-gold); border-left: 2px solid var(--accent-gold); }
+.plaque-br { bottom: 20px; right: 20px; border-bottom: 2px solid var(--accent-gold); border-right: 2px solid var(--accent-gold); }
+
+.about-body {
+  margin: 38px auto 0;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-paragraph {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--text-white);
+  opacity: 0.85;
+}
+
+.about-tagline-block {
+  margin-top: 42px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(205, 142, 87, 0.25);
+}
+
+.about-tagline-intro {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-white);
+  opacity: 0.85;
+  margin-bottom: 18px;
+}
+
+.about-tagline-words {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+}
+
+.tagline-word {
+  display: inline-block;
+  font-family: var(--font-script);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--accent-gold);
+  line-height: 1.2;
+}
+
+@keyframes aboutBlurUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes wordReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.88);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.about-stagger-2,
+.about-stagger-3,
+.about-stagger-4,
+.about-stagger-5,
+.about-stagger-6,
+.about-stagger-7,
+.about-stagger-8 {
+  opacity: 0;
+}
+
+.reveal-on-scroll.is-visible .about-stagger-2 { animation: aboutBlurUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.15s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-3 { animation: aboutBlurUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.35s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-4 { animation: aboutBlurUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.55s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-5 { animation: aboutBlurUp 1s cubic-bezier(0.23, 1, 0.32, 1) 0.75s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-6 { animation: wordReveal 0.9s cubic-bezier(0.23, 1, 0.32, 1) 1.0s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-7 { animation: wordReveal 0.9s cubic-bezier(0.23, 1, 0.32, 1) 1.3s forwards; }
+.reveal-on-scroll.is-visible .about-stagger-8 { animation: wordReveal 0.9s cubic-bezier(0.23, 1, 0.32, 1) 1.6s forwards; }
+
+@media (max-width: 768px) {
+  .about-section { padding: 80px 5% 70px; }
+  .about-glass-card { padding: 56px 26px 44px; }
+  .plaque-badge { font-size: 0.55rem; padding: 6px 16px; letter-spacing: 1.5px; }
+  .about-body { margin-top: 28px; max-width: 100%; }
+  .about-paragraph { font-size: 1rem; }
+  .about-tagline-block { margin-top: 28px; padding-top: 24px; }
+  .about-tagline-intro { font-size: 1rem; }
+  .tagline-word { font-size: 1.8rem; }
+}
+
 /* ── MANIFESTO IMMERSIVE (Propósito Sartorial) ─────────── */
 .manifesto-section {
   position: relative;
@@ -841,14 +1049,16 @@ ul { list-style: none; }
 .pricing-grid {
   position: relative;
   z-index: 5;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  max-width: 900px;
+  max-width: 1150px;
   margin: 60px auto 0;
 }
 
 .pricing-card {
+  position: relative;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(40px);
   -webkit-backdrop-filter: blur(40px);
@@ -858,7 +1068,8 @@ ul { list-style: none; }
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1 1 290px;
+  max-width: 360px;
 }
 
 .pricing-card:hover {
@@ -871,6 +1082,95 @@ ul { list-style: none; }
 .pricing-card.accent-card {
   background: rgba(205, 142, 87, 0.04);
   border-color: rgba(205, 142, 87, 0.2);
+  transform: scale(1.04);
+  box-shadow: 0 30px 80px -20px rgba(205, 142, 87, 0.25);
+}
+
+.pricing-card.accent-card:hover {
+  transform: translateY(-10px) scale(1.04);
+}
+
+.plan-info-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.plan-info-btn:hover {
+  background: rgba(205, 142, 87, 0.2);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.plan-modal-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.plan-modal-backdrop.active {
+  display: flex;
+}
+
+.plan-modal-box {
+  background: #1a1a1a;
+  border: 1px solid rgba(205, 142, 87, 0.3);
+  border-radius: var(--radius-md);
+  padding: 40px 35px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+}
+
+.plan-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.plan-modal-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--accent-gold);
+}
+
+.plan-modal-text {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.plan-modal-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 16px;
 }
 
 .recomendado-badge {
@@ -948,12 +1248,6 @@ ul { list-style: none; }
   margin-top: 40px;
 }
 
-@media (max-width: 992px) {
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 500px;
-  }
-}
 
 /* ── DEPOIMENTOS ────────────────────────────────────────── */
 .testimonials-section {
@@ -1342,7 +1636,7 @@ section[id] {
 }
 
 @media (max-width: 900px) {
-  .hero-grid, .manifesto-grid, .team-grid, .pricing-grid, .locations-grid {
+  .hero-grid, .manifesto-grid, .team-grid, .locations-grid {
     grid-template-columns: 1fr;
   }
   .hero-grid { gap: 16px; }
@@ -1350,7 +1644,26 @@ section[id] {
   .services-grid { grid-template-columns: 1fr 1fr; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .nav-menu { display: none; }
-  
+  .nav-menu.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(11, 18, 16, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px 40px;
+  }
+  .nav-menu.open a {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+  }
+  .nav-hamburger { display: flex; }
+
   .hero-title { font-size: 2.3rem; }
   .nav-cta { padding: 8px 15px; font-size: 0.7rem; }
   .testimonials-header { flex-direction: column; align-items: flex-start; gap: 20px; }
@@ -1441,6 +1754,95 @@ section[id] {
   .hero-section { padding-top: 120px !important; padding-bottom: 60px; align-items: flex-start; }
   .logo img { height: 30px !important; }
   .hero-title { font-size: 1.8rem; }
+}
+
+/* ── HAMBURGER MENU BUTTON ─────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-white);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── TOUCH INTERACTIONS (mobile) ────────────────────────────
+   hover: none = touch-only device (iOS/Android)              */
+
+/* Fundadores: fotos sempre coloridas no mobile */
+@media (hover: none) {
+  .founder-img {
+    filter: grayscale(0%) contrast(1);
+  }
+}
+
+/* Galeria: estado ativo por toque */
+@media (hover: none) {
+  .gallery-card.touch-active {
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 15px rgba(205,142,87,0.2);
+    z-index: 2;
+  }
+  .gallery-card.touch-active .gallery-img {
+    transform: scale(1.08);
+    filter: grayscale(0%) contrast(1);
+  }
+  .gallery-card.touch-active .gallery-overlay {
+    opacity: 1;
+  }
+  .gallery-card.touch-active .overlay-text {
+    transform: translateY(0);
+  }
+}
+
+/* ── FIX backdrop-filter flash no scroll reveal ─────────────
+   Quando o pai usa opacity 0→1, o browser cria a camada de composição
+   tardiamente e o backdrop-filter aparece depois do card.
+   Solução: manter opacity:1 nessa seção, animar só o transform. */
+.aggressive-cta-banner .reveal-on-scroll {
+  opacity: 1;
+}
+.aggressive-cta-banner .reveal-on-scroll.is-visible {
+  opacity: 1;
+}
+
+/* ── FIX iOS SAFARI: background-attachment fixed não funciona ── */
+@media (hover: none) {
+  .manifesto-bg-atmosphere,
+  .aggressive-cta-banner {
+    background-attachment: scroll;
+  }
+}
+
+/* ── FIX hero height em iOS (svh = small viewport height) ───── */
+@supports (min-height: 100svh) {
+  .hero-section { min-height: 100svh; }
 }
 
 /* ── WHATSAPP FLOAT ───────────────────────────────────────── */
