@@ -12,7 +12,7 @@
     <meta name="geo.position" content="-15.875;-48.073">
     <meta name="ICBM" content="-15.875, -48.073">
     <title>Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília</title>
-    <link rel="canonical" href="https://barbeariaa37-4db87.web.app/">
+    <link rel="canonical" href="https://barbeariaa37.com.br/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -25,23 +25,25 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília">
     <meta property="og:description" content="Barbearia premium por assinatura em Samambaia, Brasília. Cortes e barbas ilimitados a partir de R$69,90/mês. +600 assinantes. Agende agora!">
-    <meta property="og:image" content="https://barbeariaa37-4db87.web.app/og-image.png">
+    <meta property="og:image" content="https://barbeariaa37.com.br/og-image.png">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://barbeariaa37-4db87.web.app/">
+    <meta property="og:url" content="https://barbeariaa37.com.br/">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Barbearia A37">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Barbearia A37 | Barbearia por Assinatura em Samambaia, Brasília">
     <meta name="twitter:description" content="Barbearia premium por assinatura em Samambaia, Brasília. Cortes e barbas ilimitados. Agende pelo app!">
-    <meta name="twitter:image" content="https://barbeariaa37-4db87.web.app/og-image.png">
+    <meta name="twitter:image" content="https://barbeariaa37.com.br/og-image.png">
 
     <!-- Preload hero image para LCP -->
-    <link rel="preload" as="image" href="assets/hero_v3.webp">
+    <link rel="preload" as="image" href="assets/hero_v3.webp" imagesizes="100vw" fetchpriority="high">
 
     <!-- Web App Manifest -->
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Google Fonts: Inter (geral) e Playfair Display (para o script "Sem Limites") -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -56,6 +58,20 @@
 </head>
 
 <body>
+
+    <a href="#hero" class="skip-link">Pular para o conteúdo</a>
+
+    <!-- SVG sprite reutilizável (ícone Google) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="ico-google" viewBox="0 0 48 48">
+                <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+                <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+                <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238C29.211 35.091 26.715 36 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+                <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303c-.792 2.237-2.231 4.166-4.087 5.571l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+            </symbol>
+        </defs>
+    </svg>
 
     <!-- =======================================
          NAVBAR
@@ -82,6 +98,8 @@
         </div>
     </header>
 
+    <main id="conteudo">
+
     <!-- =======================================
          HERO SECTION
          ======================================= -->
@@ -104,7 +122,7 @@
             <div class="hero-subscription-card hero-reveal" style="animation-delay: 1s;">
                 <div class="sub-badge"><span class="material-symbols-outlined">group</span> +600 ASSINANTES</div>
                 <img src="assets/logos/logo_letras_bege.webp" alt="Clube A37" class="hero-club-logo">
-                <h3>Clube Exclusivo</h3>
+                <h2>Clube Exclusivo</h2>
                 <p>Garanta sua <strong>presença impecável</strong> todos os dias com cortes e manutenções ilimitadas.
                 </p>
                 <a href="/plano" class="btn btn-primary btn-block btn-large">Fazer Parte do Clube</a>
@@ -137,7 +155,6 @@
                 <span class="plaque-corner plaque-bl"></span>
                 <span class="plaque-corner plaque-br"></span>
 
-                <span class="section-kicker about-stagger-2">QUEM SOMOS</span>
                 <h2 class="section-title about-stagger-2">
                     A maior e melhor barbearia,<br>
                     <span class="accent-script">por assinatura.</span>
@@ -379,6 +396,7 @@
                         <li><span class="material-symbols-outlined check">check_circle</span> Lavar Cabelo/Secar</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> Produtos de Finalização</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
+                        <li><span class="material-symbols-outlined check parceiros-check">storefront</span> Benefícios e cupons em lojas parceiras</li>
                     </ul>
 
                     <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar Agora</a>
@@ -400,7 +418,9 @@
                     <ul class="plan-features">
                         <li><span class="material-symbols-outlined check">check_circle</span> Barba Ilimitada</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> Acabamento Incluso</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Tratamento com Vapor de Ozônio</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
+                        <li><span class="material-symbols-outlined check parceiros-check">storefront</span> Benefícios e cupons em lojas parceiras</li>
                     </ul>
 
                     <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar Agora</a>
@@ -422,13 +442,22 @@
 
                     <ul class="plan-features">
                         <li><span class="material-symbols-outlined check">check_circle</span> Corte e Barba Ilimitados</li>
-                        <li><span class="material-symbols-outlined check">check_circle</span> Corte na Máquina Ilimitado</li>
+                        <li><span class="material-symbols-outlined check">check_circle</span> Corte Máquina/Tesoura Ilimitado</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> Tratamento com Vapor de Ozônio</li>
                         <li><span class="material-symbols-outlined check">check_circle</span> 10% de desconto em serviços extras e produtos</li>
+                        <li><span class="material-symbols-outlined check parceiros-check">storefront</span> Benefícios e cupons em lojas parceiras</li>
                     </ul>
 
                     <a href="/plano" class="btn btn-primary btn-block mt-auto">Assinar o Clube</a>
                 </div>
+            </div>
+
+            <div class="parceiros-trigger-wrap">
+                <button id="open-parceiros-modal" class="parceiros-trigger-btn" aria-label="Ver lojas parceiras">
+                    <span class="material-symbols-outlined">storefront</span>
+                    Ver lojas parceiras do Clube
+                    <span class="material-symbols-outlined parceiros-arrow">arrow_forward</span>
+                </button>
             </div>
 
             <p class="pricing-disclaimer text-center">*Sem fidelidade. Cancele quando quiser por telefone ou diretamente na recepção. Planos intransferíveis.
@@ -445,10 +474,9 @@
                 <div style="flex-grow: 1;">
                     <span class="section-kicker">O QUE A COMUNIDADE DIZ</span>
                     <h2 class="section-title text-left">Vozes da Comunidade</h2>
-                    <a href="https://www.google.com/maps/place/?q=place_id:ChIJKRuQCQjTW5MR4-plYnJWnpc&hl=pt-BR&reviews=1" target="_blank" class="btn btn-outline"
+                    <a href="https://www.google.com/maps/place/?q=place_id:ChIJKRuQCQjTW5MR4-plYnJWnpc&hl=pt-BR&reviews=1" target="_blank" rel="noopener noreferrer" class="btn btn-outline"
                         style="padding: 10px 20px; font-size: 0.8rem; margin-top: 15px; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.05);">
-                        <img src="https://www.google.com/favicon.ico" alt="Google"
-                            style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;">
+                        <svg style="width: 16px; height: 16px; margin-right: 8px; vertical-align: middle;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         Ver Avaliações no Google
                     </a>
                 </div>
@@ -464,18 +492,15 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 2 dias</span>
-                    <p class="review-text">"O conceito de assinatura resgatou minha rotina. Minha farda impecável no meu
-                        dia a dia mostra meu respeito para o meu negócio e facilidade imensa no app. Vale o tempo."</p>
+                    <p class="review-text">"Melhor barbearia de Brasília. Ótimos barbeiros, local limpo e organizado, os melhores equipamentos, ambiente tranquilo, boa temperatura, ótimos profissionais. Estão de parabéns."</p>
                     <div class="reviewer">
-                        <div class="avatar" style="background-color: #4285F4;">M</div>
+                        <div class="avatar" style="background-color: #4285F4;">L</div>
                         <div class="reviewer-info">
-                            <strong>Marcos Oliveira</strong>
-                            <span>Assinante Plano Black</span>
+                            <strong>LuckzZ</strong>
                         </div>
                     </div>
                 </div>
@@ -483,18 +508,15 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 1 mês</span>
-                    <p class="review-text">"Atendimento fenomenal. Já é importante vir pelo serviço, mas o ambiente e as
-                        conversas me deixam relaxado. Recomendo muito aos moradores da região que buscam lugar cativo."</p>
+                    <p class="review-text">"Os melhores de Brasília. Atendimento excelente, ambiente agradável e com plano mensal disponível muito acessível."</p>
                     <div class="reviewer">
                         <div class="avatar" style="background-color: #DB4437;">L</div>
                         <div class="reviewer-info">
-                            <strong>Lucas dos Santos</strong>
-                            <span>Cliente Frequente</span>
+                            <strong>Lucas Nascimento</strong>
                         </div>
                     </div>
                 </div>
@@ -502,19 +524,15 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 5 meses</span>
-                    <p class="review-text">"Assinatura mudou a cultura dos meus rapazes. Tenho o plano focado para levar
-                        a garotada. O comprometimento das figuras que tocam o espaço se traduz em boa vibe, silêncio e
-                        corte."</p>
+                    <p class="review-text">"Excelente barbearia, é possível fazer agendamento e eles cumprem o horário, o que para quem tem compromissos faz toda a diferença."</p>
                     <div class="reviewer">
-                        <div class="avatar" style="background-color: #F4B400;">C</div>
+                        <div class="avatar" style="background-color: #F4B400;">A</div>
                         <div class="reviewer-info">
-                            <strong>Carlos Bastos</strong>
-                            <span>Assinante Plano VIP</span>
+                            <strong>André Gustavo</strong>
                         </div>
                     </div>
                 </div>
@@ -522,18 +540,15 @@
                 <!-- Testimonial 4 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 2 semanas</span>
-                    <p class="review-text">"O ambiente é incrível, aconchegante e extremamente profissional. A equipe
-                        entende muito de estilo, me senti acolhida e escutada. Recomendo muito!"</p>
+                    <p class="review-text">"Olá, gostaria de deixar meu elogio à barbearia pelo atendimento prestado ao meu filho. O Kaká foi muito atencioso. Super indico, ganharam um cliente!"</p>
                     <div class="reviewer">
-                        <div class="avatar" style="background-color: #0F9D58;">R</div>
+                        <div class="avatar" style="background-color: #0F9D58;">C</div>
                         <div class="reviewer-info">
-                            <strong>Roberta Alves</strong>
-                            <span>Cliente Frequente</span>
+                            <strong>Camila Dias</strong>
                         </div>
                     </div>
                 </div>
@@ -541,18 +556,15 @@
                 <!-- Testimonial 5 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 3 meses</span>
-                    <p class="review-text">"Assinei o plano e não me arrependo. Atendimento prático e impecável, a
-                        equipe não mede esforços na atenção aos detalhes e manutenção contínua."</p>
+                    <p class="review-text">"Meu namorado foi atendido pelo João Victor e voltou pra casa um gato! Dou nota 5 pelo excelente atendimento e prestação de serviço! Lugar organizado e higienizado, e indico pra todos."</p>
                     <div class="reviewer">
                         <div class="avatar" style="background-color: #8E24AA;">A</div>
                         <div class="reviewer-info">
-                            <strong>André Silva</strong>
-                            <span>Assinante Plano VIP</span>
+                            <strong>Ana Caroline Santos</strong>
                         </div>
                     </div>
                 </div>
@@ -560,18 +572,15 @@
                 <!-- Testimonial 6 -->
                 <div class="testimonial-card">
                     <div class="google-badge">
-                        <img src="https://www.google.com/favicon.ico" alt="Google" style="width: 14px; height: 14px;">
+                        <svg style="width: 14px; height: 14px;" aria-hidden="true" focusable="false"><use href="#ico-google"/></svg>
                         <span>Avaliação Google</span>
                     </div>
                     <div class="stars">★★★★★</div>
-                    <span class="date">Há 4 meses</span>
-                    <p class="review-text">"Espaço super bem estruturado e com um padrão de excelência altíssimo para
-                        todos os clientes. Além disso o agendamento pelo app adianta demais a minha vida!"</p>
+                    <p class="review-text">"A Ana nos recebeu de forma impecável! Muito educada, simpática e atenciosa, nos recebeu super bem e fez toda a diferença na nossa experiência desde a chegada. Dá pra ver o cuidado e o profissionalismo no que ela faz. Estão de parabéns!"</p>
                     <div class="reviewer">
-                        <div class="avatar" style="background-color: #00838F;">J</div>
+                        <div class="avatar" style="background-color: #00838F;">C</div>
                         <div class="reviewer-info">
-                            <strong>Joana Diniz</strong>
-                            <span>Cliente Frequente</span>
+                            <strong>Clara Maria</strong>
                         </div>
                     </div>
                 </div>
@@ -650,22 +659,22 @@
                     <p class="locations-desc">Estamos em pontos estratégicos da cidade. Escolha a sua comodidade.
                     </p>
 
-                    <a href="https://maps.app.goo.gl/wS2Mb44JUfEftJAV7" target="_blank" class="unit-card-link">
+                    <a href="https://maps.app.goo.gl/wS2Mb44JUfEftJAV7" target="_blank" rel="noopener noreferrer" class="unit-card-link">
                         <div class="unit-card">
                             <span class="material-symbols-outlined map-icon">location_on</span>
                             <div class="unit-info">
-                                <h4 class="unit-name">A37 Samambaia - QS 112</h4>
+                                <h3 class="unit-name">A37 Samambaia - QS 112</h3>
                                 <p class="unit-address">Qs 112 cj05 lt01 - Samambaia, Brasília - DF, 72302-545</p>
                                 <span class="unit-status open">ATÉ 20H</span>
                             </div>
                         </div>
                     </a>
 
-                    <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" class="unit-card-link">
+                    <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" rel="noopener noreferrer" class="unit-card-link">
                         <div class="unit-card">
                             <span class="material-symbols-outlined map-icon">location_on</span>
                             <div class="unit-info">
-                                <h4 class="unit-name">A37 Samambaia - CT Urbano 302</h4>
+                                <h3 class="unit-name">A37 Samambaia - CT Urbano 302</h3>
                                 <p class="unit-address">Centro Urbano Q. 302 CJ 06 LT 01 LOJA 14 - Samambaia, Brasília - DF, 72300-641</p>
                                 <span class="unit-status open">ATÉ 20H</span>
                             </div>
@@ -673,7 +682,7 @@
                     </a>
                 </div>
 
-                <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" class="locations-map-placeholder"
+                <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" rel="noopener noreferrer" class="locations-map-placeholder"
                     style="background: url('assets/gerais/mapa.webp') center/cover; border: 1px solid rgba(255,255,255,0.1); display: block;"
                     aria-label="Ver mapa da Barbearia A37 no Google Maps">
                 </a>
@@ -694,6 +703,8 @@
         </div>
     </section>
 
+    </main>
+
     <!-- =======================================
          FOOTER
          ======================================= -->
@@ -702,25 +713,22 @@
             <!-- Coluna 1: Logo e Descrição -->
             <div class="footer-col branding">
                 <div class="footer-logo">
-                    <img src="assets/logos/logo_letras_bege.webp" alt="Barbearia A37"
+                    <img src="assets/logos/logo_letras_bege.webp" alt="Barbearia A37" loading="lazy"
                         style="height: 40px; margin-bottom: 20px;">
                 </div>
                 <p class="footer-about">A excelência em design de corte e cuidado pessoal. Samambaia, Brasília.</p>
                 <div class="footer-social">
-                    <a href="https://instagram.com/barbeariaa37" target="_blank" title="Instagram">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
-                            alt="Instagram" style="width: 20px; height: 20px;">
-                    </a>
-                    <a href="#" target="_blank" title="Facebook">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
-                            alt="Facebook" style="width: 20px; height: 20px;">
+                    <a href="https://instagram.com/barbeariaa37" target="_blank" rel="noopener noreferrer" aria-label="Instagram Barbearia A37">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false">
+                            <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.39C1.34 2.69.93 3.36.62 4.14.32 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13.67.67 1.34 1.08 2.13 1.39.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.39.67-.67 1.08-1.34 1.39-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.39-2.13C21.31 1.34 20.64.93 19.86.62 19.1.32 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                        </svg>
                     </a>
                 </div>
             </div>
 
             <!-- Coluna 2: Navegação -->
             <div class="footer-col nav">
-                <h4>Navegação</h4>
+                <h3 class="footer-heading">Navegação</h3>
                 <ul>
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#time">Quem Somos</a></li>
@@ -732,14 +740,14 @@
 
             <!-- Coluna 3: Nossas Casas (Endereços) -->
             <div class="footer-col addresses">
-                <h4>Nossas Casas</h4>
-                <a href="https://maps.app.goo.gl/wS2Mb44JUfEftJAV7" target="_blank" class="footer-address-link">
+                <h3 class="footer-heading">Nossas Casas</h3>
+                <a href="https://maps.app.goo.gl/wS2Mb44JUfEftJAV7" target="_blank" rel="noopener noreferrer" class="footer-address-link">
                     <div class="footer-address">
                         <p><strong>Samambaia Sul (112)</strong><br>
                             Qs 112 cj05 lt01 - Brasília - DF</p>
                     </div>
                 </a>
-                <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" class="footer-address-link">
+                <a href="https://maps.app.goo.gl/N4qZqVY6TG4vUXvf8" target="_blank" rel="noopener noreferrer" class="footer-address-link">
                     <div class="footer-address" style="margin-top: 15px;">
                         <p><strong>Samambaia Norte (302)</strong><br>
                             CT Urbano Q. 302 CJ 06 LT 01 LOJA 14</p>
@@ -749,12 +757,12 @@
 
             <!-- Coluna 4: Contato -->
             <div class="footer-col contact">
-                <h4>Seja Bem-vindo</h4>
+                <h3 class="footer-heading">Seja Bem-vindo</h3>
                 <div class="contact-info">
                     <a href="tel:+5561983648832" class="contact-link">
                         <span class="material-symbols-outlined">call</span> (61) 98364-8832
                     </a>
-                    <a href="https://wa.me/5561983648832" target="_blank" class="contact-link">
+                    <a href="https://wa.me/5561983648832" target="_blank" rel="noopener noreferrer" class="contact-link">
                         <span class="material-symbols-outlined">chat</span> Agendar WhatsApp
                     </a>
                 </div>
@@ -766,24 +774,58 @@
                 &copy; 2026 Barbearia A37. A essência do seu estilo.
             </div>
             <div class="footer-legal">
-                <a href="#" id="open-privacy">Privacidade</a>
-                <a href="#" id="open-terms">Termos</a>
+                <button type="button" id="open-privacy" class="footer-legal-link">Privacidade</button>
+                <button type="button" id="open-terms" class="footer-legal-link">Termos</button>
             </div>
         </div>
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
-    <a href="https://wa.me/5561983648832" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <a href="https://wa.me/5561983648832" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/>
+        </svg>
         <span>TIRE SUAS DÚVIDAS</span>
     </a>
 
     <!-- Modal de Políticas e Termos -->
-    <div class="modal-overlay" id="legal-modal">
+    <div class="modal-overlay" id="legal-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-label="Documentos legais">
         <div class="modal-content glass-panel">
             <span class="modal-close" id="close-modal">&times;</span>
             <h2 id="modal-title" class="section-title text-left" style="font-size: 1.8rem; margin-bottom: 20px;"></h2>
             <div class="modal-body text-muted" id="modal-body" style="line-height: 1.6; font-size: 0.95rem;"></div>
+        </div>
+    </div>
+
+    <!-- Modal de Parceiros -->
+    <div id="parceiros-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="parceiros-modal-title">
+        <div class="modal-content parceiros-modal-content">
+            <span class="modal-close" id="close-parceiros-modal" aria-label="Fechar">&times;</span>
+            <h3 id="parceiros-modal-title" class="plan-modal-name">Lojas Parceiras</h3>
+            <p class="parceiros-modal-subtitle">Benefícios e cupons exclusivos para assinantes do Clube A37.</p>
+            <div class="parceiros-grid">
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/acaipurissimo.webp" alt="Açaí Puríssimo" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/alcance.webp" alt="Alcance" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/bluefit.webp" alt="Bluefit" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/cafecontempo.webp" alt="Café Contempo" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/milkymoo.webp" alt="Milky Moo" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/stationburger.webp" alt="Station Burger" loading="lazy">
+                </div>
+                <div class="parceiro-card">
+                    <img src="assets/parceiros/wsouza.webp" alt="W. Souza" loading="lazy">
+                </div>
+            </div>
         </div>
     </div>
 
@@ -797,7 +839,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <!-- Schema.org LocalBusiness JSON-LD -->
     <script type="application/ld+json">
@@ -806,18 +848,18 @@
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://barbeariaa37-4db87.web.app/#organization",
+          "@id": "https://barbeariaa37.com.br/#organization",
           "name": "Barbearia A37",
-          "url": "https://barbeariaa37-4db87.web.app/",
-          "logo": "https://barbeariaa37-4db87.web.app/assets/logos/logo_letras_bege.webp",
+          "url": "https://barbeariaa37.com.br/",
+          "logo": "https://barbeariaa37.com.br/assets/logos/logo_letras_bege.webp",
           "sameAs": ["https://instagram.com/barbeariaa37"]
         },
         {
           "@type": "HairSalon",
-          "@id": "https://barbeariaa37-4db87.web.app/#unidade-qs112",
+          "@id": "https://barbeariaa37.com.br/#unidade-qs112",
           "name": "Barbearia A37 — Samambaia QS 112",
-          "image": "https://barbeariaa37-4db87.web.app/og-image.png",
-          "url": "https://barbeariaa37-4db87.web.app/",
+          "image": "https://barbeariaa37.com.br/og-image.png",
+          "url": "https://barbeariaa37.com.br/",
           "telephone": "+55-61-98364-8832",
           "priceRange": "R$69–R$119/mês",
           "address": {
@@ -846,14 +888,14 @@
             "ratingValue": "5.0",
             "reviewCount": "200"
           },
-          "parentOrganization": { "@id": "https://barbeariaa37-4db87.web.app/#organization" }
+          "parentOrganization": { "@id": "https://barbeariaa37.com.br/#organization" }
         },
         {
           "@type": "HairSalon",
-          "@id": "https://barbeariaa37-4db87.web.app/#unidade-302",
+          "@id": "https://barbeariaa37.com.br/#unidade-302",
           "name": "Barbearia A37 — Samambaia CT Urbano 302",
-          "image": "https://barbeariaa37-4db87.web.app/og-image.png",
-          "url": "https://barbeariaa37-4db87.web.app/",
+          "image": "https://barbeariaa37.com.br/og-image.png",
+          "url": "https://barbeariaa37.com.br/",
           "telephone": "+55-61-98364-8832",
           "priceRange": "R$69–R$119/mês",
           "address": {
@@ -877,7 +919,7 @@
             "ratingValue": "5.0",
             "reviewCount": "200"
           },
-          "parentOrganization": { "@id": "https://barbeariaa37-4db87.web.app/#organization" }
+          "parentOrganization": { "@id": "https://barbeariaa37.com.br/#organization" }
         }
       ]
     }

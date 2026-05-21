@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://barbeariaa37-4db87.web.app/sitemap.xml
+Sitemap: https://barbeariaa37.com.br/sitemap.xml

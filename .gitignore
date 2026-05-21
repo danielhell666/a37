@@ -1,0 +1,9 @@
+# Logs
+firebase-debug.log
+*.log
+
+# Claude Code auditoria local
+.claude/
+
+# Backups locais
+assets/backup/

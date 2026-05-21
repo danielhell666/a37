@@ -144,7 +144,21 @@ document.addEventListener('DOMContentLoaded', () => {
     planModal.addEventListener('click', e => { if (e.target === planModal) planModal.classList.remove('active'); });
 
 
-    /* ── 6. Touch interactions (mobile gallery) ─────────────────
+    /* ── 6. Modal de Parceiros ───────────────────────────────── */
+    const parceirosModal = document.getElementById('parceiros-modal');
+    const openParceiros = document.getElementById('open-parceiros-modal');
+    const closeParceiros = document.getElementById('close-parceiros-modal');
+
+    if (parceirosModal && openParceiros) {
+        openParceiros.addEventListener('click', () => parceirosModal.classList.add('active'));
+        closeParceiros.addEventListener('click', () => parceirosModal.classList.remove('active'));
+        parceirosModal.addEventListener('click', e => {
+            if (e.target === parceirosModal) parceirosModal.classList.remove('active');
+        });
+    }
+
+
+    /* ── 7. Touch interactions (mobile gallery) ─────────────────
        Em dispositivos touch hover não existe, então ativamos os
        efeitos da galeria via toque. Toca num card → abre; toca
        em outro → fecha o anterior e abre o novo.                */
@@ -167,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* ── 7. Hamburger Menu ───────────────────────────────────── */
+    /* ── 8. Hamburger Menu ───────────────────────────────────── */
     const hamburger = document.getElementById('nav-hamburger');
     const navMenu = document.getElementById('nav-menu');
 
