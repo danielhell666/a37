@@ -10,9 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     */
     const revealElements = document.querySelectorAll('.reveal-on-scroll');
 
+    const isTouchDevice = window.matchMedia('(hover: none)').matches;
+
     const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: isTouchDevice ? 0.04 : 0.12,
+        rootMargin: isTouchDevice ? "0px 0px 80px 0px" : "0px 0px -30px 0px"
     };
 
     const scrollObserver = new IntersectionObserver((entries, observer) => {
@@ -50,14 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'var(--bg-main)';
-            header.style.padding = '15px 5%';
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
-            header.style.transition = 'all 0.3s ease';
+            header.classList.add('scrolled');
         } else {
-            header.style.backgroundColor = 'transparent';
-            header.style.padding = '20px 5%';
-            header.style.boxShadow = 'none';
+            header.classList.remove('scrolled');
         }
     });
 

@@ -185,10 +185,17 @@ textarea:focus-visible,
 .navbar {
   padding: 15px 5%;
   background-color: transparent;
-  position: fixed; /* Fixada no topo */
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000; /* Garante que fique acima de tudo */
+  z-index: 1000;
+  transition: background-color 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background-color: var(--bg-main);
+  padding: 15px 5%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 .nav-container {
@@ -2162,5 +2169,58 @@ section[id] {
   }
   .parceiros-modal-content {
     padding: 35px 20px 28px;
+  }
+}
+
+/* ── MOBILE: animações otimizadas (sem blur, delays menores) ─── */
+@media (hover: none) {
+  /* Remove filter:blur das keyframes — pesado na GPU mobile */
+  @keyframes heroReveal {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes aboutBlurUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes wordReveal {
+    from { opacity: 0; transform: translateY(10px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  /* Hero mais rápido */
+  .hero-reveal {
+    animation-duration: 0.8s;
+  }
+
+  /* Reveal geral mais rápido */
+  .reveal-on-scroll {
+    transition-duration: 0.45s;
+  }
+
+  /* Stagger com delays comprimidos */
+  .reveal-on-scroll.is-visible .about-stagger-2 { animation: aboutBlurUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.05s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-3 { animation: aboutBlurUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.12s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-4 { animation: aboutBlurUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.19s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-5 { animation: aboutBlurUp 0.5s cubic-bezier(0.23, 1, 0.32, 1) 0.26s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-6 { animation: wordReveal 0.45s cubic-bezier(0.23, 1, 0.32, 1) 0.33s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-7 { animation: wordReveal 0.45s cubic-bezier(0.23, 1, 0.32, 1) 0.40s forwards; }
+  .reveal-on-scroll.is-visible .about-stagger-8 { animation: wordReveal 0.45s cubic-bezier(0.23, 1, 0.32, 1) 0.47s forwards; }
+}
+
+/* ── Usuários que pedem menos movimento (acessibilidade) ──────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal,
+  .reveal-on-scroll {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+  .about-stagger-2, .about-stagger-3, .about-stagger-4,
+  .about-stagger-5, .about-stagger-6, .about-stagger-7, .about-stagger-8 {
+    opacity: 1 !important;
+    animation: none !important;
   }
 }
