@@ -1938,6 +1938,15 @@ section[id] {
   .hero-section { min-height: 100svh; }
 }
 
+/* ── HERO: imagem mobile ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-section {
+    background: linear-gradient(to bottom, rgba(11, 18, 16, 0.70), rgba(11, 18, 16, 0.80)),
+                url('assets/hero_mobile.jpg') no-repeat center top/contain;
+    background-color: var(--bg-main);
+  }
+}
+
 /* ── WHATSAPP FLOAT ───────────────────────────────────────── */
 .whatsapp-float {
   position: fixed;
