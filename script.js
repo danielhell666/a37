@@ -108,17 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ── 5. Plan Info Modal ──────────────────────────────────── */
     const planDetails = {
         corte: {
-            name: 'Plano Corte — R$ 69,90/mês',
+            name: 'Plano Corte — R$ 85,00/mês',
             text: 'Ideal para quem gosta de manter o corte impecável em qualquer ocasião, com praticidade, prioridade e padrão A37 em cada atendimento.',
             note: 'Agendamento disponível nos dias de funcionamento pelo aplicativo Cashbarber ou pelo WhatsApp.'
         },
         barba: {
-            name: 'Plano Barba — R$ 89,90/mês',
+            name: 'Plano Barba — R$ 99,00/mês',
             text: 'Acabamento preciso, desenho alinhado e cuidado profissional para manter sua imagem sempre forte e elegante.',
             note: 'Agendamento disponível nos dias de funcionamento pelo aplicativo Cashbarber ou pelo WhatsApp.'
         },
         corte_barba: {
-            name: 'Plano Corte + Barba — R$ 119,90/mês',
+            name: 'Plano Corte + Barba — R$ 137,00/mês',
             text: 'Liberdade para manter cabelo e barba sempre em dia, sem preocupação e sem limites. Mais praticidade, autoestima e presença para quem exige o melhor da própria imagem.',
             note: 'Agendamento disponível nos dias de funcionamento pelo aplicativo Cashbarber ou pelo WhatsApp.'
         }
